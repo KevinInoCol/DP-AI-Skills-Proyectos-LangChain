@@ -1,0 +1,28 @@
+# ============================================
+# Agente Municipal - LangChain v1
+# ============================================
+
+# LangChain v1 (create_agent + middleware)
+langchain>=1.4
+langchain-openai             # GPT-4.1 + embeddings
+
+# Memoria: checkpointer en Postgres (Supabase)
+langgraph-checkpoint-postgres
+psycopg[binary,pool]         # el extra "pool" es obligatorio (ConnectionPool)
+
+# RAG: PGVector + ingesta de PDFs
+langchain-postgres           # PGVector
+langchain-community          # PyPDFLoader
+langchain-text-splitters
+pypdf
+
+# Tool de búsqueda en internet
+langchain-tavily
+
+# API
+fastapi
+uvicorn[standard]
+
+# Utilidades
+python-dotenv
+PyYAML

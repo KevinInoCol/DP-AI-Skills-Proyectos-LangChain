@@ -1,0 +1,17 @@
+name: agente-municipal-model-config
+version: 1.0.0
+description: >
+  Configuración del LLM y de la memoria del Agente Municipal (Girardota).
+  La lee agent.py. Sin prompt ni config de retrieval.
+author: kevin.inofuente.colque.27@gmail.com
+created_at: 2026-10-07
+
+llm:
+  provider: openai
+  model: gpt-4.1
+  temperature: 0
+
+memory:
+  retention_days: 30      # descarta mensajes más viejos que esto
+  token_limit: 3000       # umbral que dispara el resumen
+  keep_messages: 20       # mensajes recientes que sobreviven al resumen
